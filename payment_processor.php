@@ -13,7 +13,7 @@ if(isset($_POST)){
 }
 
 function disconnectAccount(){
-    $api_key = 'sk_test_N2adn9QISDR8gbKamuZJS8Q700ZXPTSeaw';
+    $api_key = '';
     $curl = curl_init();
     curl_setopt_array($curl, [
       CURLOPT_URL => 'https://connect.stripe.com/oauth/deauthorize',
@@ -21,8 +21,8 @@ function disconnectAccount(){
       CURLOPT_HTTPHEADER => ["Authorization: Bearer $api_key"],
       CURLOPT_POST => true,
       CURLOPT_POSTFIELDS => http_build_query([
-        'client_id' => 'ca_FCPIHtQCxsaydtlGjKlO5pval17Gp9Y2',
-        'stripe_user_id' => 'acct_SUS6Z9FgCKwVEF',
+        'client_id' => '',
+        'stripe_user_id' => '',
       ])
     ]);
     curl_exec($curl);
