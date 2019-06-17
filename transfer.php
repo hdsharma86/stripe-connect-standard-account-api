@@ -19,7 +19,7 @@ $charge = \Stripe\Charge::create(array(
 $transfer = \Stripe\Transfer::create(array(
   "amount" => (int) (50 * 100), // USD 50.00
   "currency" => "usd",
-  "destination" => "acct_1D2hUYLIJPrG3WfU", // Add user account id here: the one we updated in redirect.php
+  "destination" => "", // Add user account id here: the one we updated in redirect.php
 
   "transfer_group" => "S10", // Should be order id or any unique identifier...
 ));
